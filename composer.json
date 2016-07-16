@@ -1,0 +1,12 @@
+{
+    "name": "jmjoy/simple-template",
+    "description": "A very very simple template engine(?) for PHP.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jmjoy",
+            "email": "918734043@qq.com"
+        }
+    ],
+    "require": {}
+}
