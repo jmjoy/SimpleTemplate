@@ -1,0 +1,42 @@
+#+TITLE: SimpleTemplate
+
+A very very simple template engine(?) for PHP.
+
+Now just do one thing:
+
+Transform *{{$name}}* to *<?php echo htmlspecialchars($name, ENT_QUOTES); ?>*
+
+_PHP is already the best template language_
+
+* Install
+
+** install by `composer`
+
+#+BEGIN_SRC json
+{
+    "require": {
+        "jmjoy/simple-template": "*"
+    }
+}
+#+END_SRC
+
+* Usage
+
+#+BEGIN_SRC php
+  $tpl = new SimpleTemplate('path/to/tpl');
+
+  $tpl->assign('data', [
+      [
+          'name' => 'NAME1',
+          'age'  => 1,
+      ],
+      [
+          'name' => 'NAME2',
+          'age'  => 2,
+      ],
+  ]);
+
+  $tpl->render();
+  // or `$content = $tpl->render(false);`
+  // if you want to get the rendered content
+#+END_SRC
