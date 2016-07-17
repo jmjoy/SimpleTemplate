@@ -22,6 +22,8 @@ _PHP is already the best template language_
 
 * Usage
 
+php code
+
 #+BEGIN_SRC php
   $tpl = new SimpleTemplate('path/to/tpl');
 
@@ -39,4 +41,14 @@ _PHP is already the best template language_
   $tpl->render();
   // or `$content = $tpl->render(false);`
   // if you want to get the rendered content
+#+END_SRC
+
+
+html template
+#+BEGIN_SRC html
+  <ul>
+    <?php foreach ($data as $row): ?>
+    <li> {{$row['name']}} ({{$row['age']}}) </li>
+    <?php endforeach; ?>
+  </ul>
 #+END_SRC
