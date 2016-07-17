@@ -80,7 +80,7 @@ class SimpleTemplate {
             ob_implicit_flush(0);
         }
 
-        eval('?>' . $this->content . '<?php');
+        eval('?>' . $this->content);
 
         if (!$output) {
             $content = ob_get_clean();
