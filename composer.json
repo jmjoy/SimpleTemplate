@@ -8,5 +8,8 @@
             "email": "918734043@qq.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "classmap": ["src/"]
+    }
 }
